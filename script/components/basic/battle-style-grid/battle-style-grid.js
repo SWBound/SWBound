@@ -82,6 +82,7 @@ export class BATTLE_STYLE_GRID extends HTMLElement {
 
         this.#controls.canvas.width = parseFloat(this.getAttribute("data-width"));
         this.#controls.canvas.height = parseFloat(this.getAttribute("data-height"));
+        this.#drawGrid();
     };
     
 
