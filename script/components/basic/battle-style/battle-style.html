@@ -1,0 +1,36 @@
+<section class="style" size="A4">
+  <header class="style__header header">
+    <h1 class="header__title" contenteditable="true">{{ title }}</h1>
+    <p class="header__description" contenteditable="true">{{ description }}</p>
+  </header>
+  <section class="requirements">
+    <h2 class="requirements__title">Requirements</h2>
+    <div class="requirements__container" editor>{{ requirements }}</div>
+    <div id="toolbar" class="hidden">
+      <button data-command="bold"><b>B</b></button>
+      <button data-command="italic"><i>I</i></button>
+      <button data-command="underline"><u>U</u></button>
+    </div>
+  </section>
+  <app-maneuver-settings class="maneuver-settings hidden" maneuver></app-maneuver-settings>
+  <section class="standard">
+    <h2 class="standard__title">Standard Maneuvers (No style)</h2>
+    <div class="standard__container">
+      <app-maneuver class="maneuver" data-attack-modifier="str" data-defence-modifier="d2" data-title="Strike" data-is-base="true"></app-maneuver>
+      <app-maneuver class="maneuver" data-attack-modifier="0" data-defence-modifier="DEX" data-title="Defend" data-is-base="true"></app-maneuver>
+      <app-maneuver class="maneuver" data-attack-modifier="STR" data-defence-modifier="d2" data-title="Grab" data-is-base="true"></app-maneuver>
+      <app-maneuver class="maneuver" data-attack-modifier="DEX" data-defence-modifier="d2" data-title="Throw \ Shoot" data-is-base="true"></app-maneuver>
+      <app-maneuver class="maneuver" data-attack-modifier="0" data-defence-modifier="d2" data-title="Trick" data-is-base="true"></app-maneuver>
+    </div>
+  </section>
+  <section class="content">
+    <div class="indicator hidden"></div>
+    <app-battle-style-grid class="content__grid"></app-battle-style-grid>
+  </section>
+  <div class="io-panel">
+    <button class="io-panel__button io-panel__button--print" id="printBtn">Print</button>
+    <button class="io-panel__button io-panel__button--save" id="saveBtn">Save</button>
+    <button class="io-panel__button io-panel__button--load" id="loadBtn">Load</button>
+    <input type="file" id="fileInput" style="display: none;">
+  </div>
+</section>

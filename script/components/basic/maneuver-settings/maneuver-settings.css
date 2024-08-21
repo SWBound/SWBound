@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:host {
+  --circle-width: 100%;
+}
+
+.maneuver-settings {
+  display: flex;
+  gap: 1rem;
+  padding-inline: 1rem;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+  position: relative;
+}
+
+.maneuver-settings__title {
+  font-size: .9rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.maneuver-settings__container {
+  flex:1;
+  display: flex;
+  gap: 1rem;
+  justify-content: stretch;
+  align-items: stretch;
+  flex-direction: column;
+  position: relative;
+}
+
+.maneuver-settings__item {
+  flex:1;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  position: relative;
+}
