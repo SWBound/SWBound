@@ -1,0 +1,114 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:host {
+  --circle-width: 100%;
+}
+
+.maneuver {
+  position: relative;
+
+  width: 100%;
+
+  display: grid;
+  grid-template-areas:
+    ". . m"
+    ". s ."
+    "a . d"
+    "info info info";
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: var(--font-size) auto auto auto;
+}
+
+.maneuver--base {
+  --circle-width: 60%;
+  --font-size: 0.55rem;
+
+  grid-template-areas:
+    ". . ."
+    ". s ."
+    "a . d"
+    "info info info";
+}
+
+.maneuver__text--master {
+  grid-area: m;
+  text-align: right;
+  align-self: start;
+  justify-self: end;
+}
+
+.maneuver--base .maneuver__text--master {
+  display: none;
+}
+
+.maneuver--base .maneuver__text {
+  font-size: var(--font-size);
+  text-transform: uppercase;
+}
+
+.maneuver__text--attack {
+  grid-area: a;
+  text-align: right;
+  align-self: end;
+  justify-self: end;
+}
+
+.maneuver__text--defence {
+  grid-area: d;
+  text-align: right;
+  align-self: end;
+  justify-self: start;
+}
+
+.maneuver__text--special {
+  grid-area: s;
+  text-align: center;
+  position: relative;
+  width: var(--circle-width);
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
+  margin: 0 auto;
+}
+
+.maneuver__text--special::after {
+  --circle-width: 7rem;
+
+  position: absolute;
+  content: "";
+  width: var(--circle-width);
+  aspect-ratio: 1/1;
+  border: 2px solid black;
+  border-radius: 50%;
+  top: calc(50% - var(--circle-width) / 2);
+  left: calc(50% - var(--circle-width) / 2);
+}
+
+.maneuver--base .maneuver__text--special::after {
+  --circle-width: 3rem;
+}
+
+.maneuver__info {
+  grid-area: info;
+
+  margin-block-start: 0.1rem;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+
+  text-align: center;
+}
+
+.maneuver__title {
+  font-weight: bold;
+}

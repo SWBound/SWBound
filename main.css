@@ -1,0 +1,38 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css");
+
+@import "./style/colors.css";
+@import "./style/default.css";
+
+
+
+.icon {
+    width: 100%;
+    height: 100%;
+    color: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+html {
+    height: 100vh;
+    font-size: var(--font-size);
+}
+
+body {
+    width: 100vw;
+    background-color: var(--primary-color);
+    color:var(--primary-font-color);
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
+}
+
+app-builder {
+    flex:1;
+    width: 100vw;
+    height: 100%;
+}

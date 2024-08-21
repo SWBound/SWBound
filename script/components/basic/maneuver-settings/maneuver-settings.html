@@ -1,0 +1,34 @@
+
+<section class="maneuver-settings">
+  <h2 class="maneuver-settings__title">Settings</h2>
+  <div class="maneuver-settings__container">
+    <div class="maneuver-settings__item">
+      <label class="maneuver-settings__label" for="title">Title</label>
+      <input class="maneuver-settings__input" type="text" id="title" value="{{ title }}">
+    </div>
+    <div class="maneuver-settings__item">
+      <label class="maneuver-settings__label" for="attack-modifier">Attack Modifier</label>
+      <input class="maneuver-settings__input" type="text" id="attack-modifier" value="{{ attackModifier }}">
+    </div>
+    <div class="maneuver-settings__item">
+      <label class="maneuver-settings__label" for="defence-modifier">Defence Modifier</label>
+      <input class="maneuver-settings__input" type="text" id="defence-modifier" value="{{ defenceModifier }}">
+    </div>
+    <div class="maneuver-settings__item">
+      <label class="maneuver-settings__label" for="force-defence-modifier">Force Defence Modifier</label>
+      <input class="maneuver-settings__input" type="text" id="force-defence-modifier" value="{{ forceDefenceModifier }}">
+    </div>
+    <div class="maneuver-settings__item">
+      <label class="maneuver-settings__label" for="is-mastery">Mastery</label>
+      <input class="maneuver-settings__input" type="checkbox" id="is-mastery" {% if isMastery %} checked {% endif %}>
+    </div>
+    <div class="maneuver-settings__item">
+      <label class="maneuver-settings__label" for="is-starter">Starter</label>
+      <input class="maneuver-settings__input" type="checkbox" id="is-starter"  {% if isStarter %} checked {% endif %}>
+    </div>
+    <div class="maneuver-settings__item">
+      <label class="maneuver-settings__label" for="details">Details</label>
+      <textarea class="maneuver-settings__input" id="details">{{ details }}</textarea>
+    </div>
+  </div>
+</section>

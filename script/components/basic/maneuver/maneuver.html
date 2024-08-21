@@ -1,0 +1,13 @@
+<div class="maneuver {% if isSelected %} maneuver--selected {% endif %} {% if isBase %} maneuver--base {% endif %} {% if isStarter %} maneuver--starter {% endif %} ">
+  <span class="maneuver__text maneuver__text--special">{{ forceDefenceModifier }}</span>
+  {% if isMastery %}
+  <span class="maneuver__text maneuver__text--master">M</span>
+  {% endif %}
+  <span class="maneuver__text maneuver__text--attack">{{ attackModifier }}</span>
+  <span class="maneuver__text maneuver__text--defence">{{ defenceModifier }}</span>
+
+  <div class="maneuver__info">
+    <p class="maneuver__title">{{ title }}</p>
+    <p class="maneuver__details">{{ details }}</p>
+  </div>
+</div>
